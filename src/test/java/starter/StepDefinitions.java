@@ -1,11 +1,12 @@
 package starter;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.api.java.en.And;
 
-public class StepDefinitions {
+public class StepDefinitions
+{
     @Given("^I am thirsty$")
     public void i_am_thirsty() throws Throwable {
     }
@@ -18,4 +19,15 @@ public class StepDefinitions {
     public void i_should_not_receive_a_latte() throws Throwable {
     }
 
+    @When("^I order a americano$")
+    public void iOrderAAmericano() throws Throwable {
+    }
+
+    @When("^I order a latte$")
+    public void iOrderALatte() throws Throwable {
+    }
+
+    @Then("^I should not receive a \"([^\"]*)\"$")
+    public void iShouldNotReceiveA(String coffee) throws Throwable {
+    }
 }
